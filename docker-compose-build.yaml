@@ -1,0 +1,24 @@
+--- 
+    services: 
+      routingassistant: 
+        image: csdecrypt/routingassistant
+        build: 
+          context: .
+          dockerfile: Dockerfile
+        entrypoint: ["/wait-for-it.sh", "db:1433", "-t", "120", "--", "dotnet", "RoutingAssistant.dll"]
+        depends_on:
+          - db
+        environment: 
+          ConnectionStrings:RoutingAssistantDB: server=localhost;database=RoutingAssistantDB;uid=SA;pwd=Test12345!;
+          ApiKey: 123123123
+          ASPNETCORE_ENVIRONMENT: Production
+        ports: 
+          - "8443:80"
+      db: 
+        image: mcr.microsoft.com/mssql/server:2017-latest
+        environment: 
+          ACCEPT_EULA: 'Y'
+          SA_PASSWORD: Test12345!
+        ports: 
+          - "1401:1433"
+    

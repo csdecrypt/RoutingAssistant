@@ -1,0 +1,5 @@
+.git
+bin/
+obj/
+switzerland-latest.osm.pbf
+file.routerdb

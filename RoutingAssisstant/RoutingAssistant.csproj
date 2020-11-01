@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RoutingAssistant.BusinessLayer\RoutingAssistant.BusinessLayer.csproj" />
+    <ProjectReference Include="..\RoutingAssistant.Core\RoutingAssistant.Core.csproj" />
+    <ProjectReference Include="..\RoutingAssistant.Root\RoutingAssistant.Root.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="file.routerdb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+
+</Project>

@@ -1,0 +1,10 @@
+﻿{
+  "ConnectionStrings": {
+    "RoutingAssistantDB": ""
+  },
+  "ApiKey": 123123,
+  "TravelServiceOptions": {
+    "RouterDBFileName": "file.routerdb",
+    "RouterDBPath":  "D:\\OSM"
+  }
+}
