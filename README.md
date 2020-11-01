@@ -8,7 +8,8 @@ Repository for RoutingAssistant .NET Core application codebase.
 Once the app is up and running, you can issue requests like
 ```
 curl --location --request POST 'http://localhost/route' --header 'ApiKey: 123123123' \
---data-raw '{
+--header 'Content-Type: application/json' \
+--data-raw '  {
   "Stops": [
     {
       "Latitude": 46.94753769790697,
